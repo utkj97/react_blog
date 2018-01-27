@@ -1,0 +1,11 @@
+<ul>
+	<% @posts.each do |posts| %>
+		<li>
+			<h4>
+				<%= link_to posts.title, posts %>
+				<p style="float: right;"><%= posts.created_at.strftime(" %B %d, %Y") %></p><br>
+			</h4>
+			<%= posts.body.truncate(100) %><hr>
+		</li>
+	<% end %>
+</ul>
