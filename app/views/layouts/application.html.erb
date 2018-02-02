@@ -9,6 +9,16 @@
   </head>
 
   <body>
+  	<% if current_user %>
+  	<ul>
+  		<li><%= current_user.name %></li>
+  		<li><%= link_to 'Logout', logout_path, method: :delete %></li>
+  	</ul>
+  	<% else %>	
+	  	<ul>
+	  		<li><%= link_to 'Facebook', '/auth/facebook' %></li>
+	  	</ul>
+	<% end %>
     <%= yield %>
   </body>
 </html>
