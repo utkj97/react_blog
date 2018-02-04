@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	before_action :require_login, except: [:index, :show]
 
 	def new
 		@post = Post.new
@@ -37,5 +38,12 @@ class PostsController < ApplicationController
 	private
 	def post_params
 		params.require(:post).permit(:title, :body)
+	end
+
+	def require_login
+		if !current_user
+			flash[:error] = "Please login to add posts"
+			redirect_to root_path
+		end
 	end
 end

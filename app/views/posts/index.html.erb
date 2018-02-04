@@ -8,5 +8,7 @@
 			<%= raw(posts.body) %><hr>
 		</li>
 	<% end %>
-	<%= link_to "New Post", new_post_path %>
+  <% if current_user %>
+	 <%= link_to "New Post", new_post_path %>
+  <% end %>
 </ul>
