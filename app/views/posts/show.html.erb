@@ -3,8 +3,9 @@
 <p><%= raw(@post.body) %> </p>
 
 <p>
+	<%= link_to "All Posts", posts_path %>
 	<% if current_user %>
 		<%= link_to "Edit Post", edit_post_path(@post) %>
+		<%= render 'disqus' %>
 	<% end %>
-	<%= link_to "All Posts", posts_path %>
 </p>
