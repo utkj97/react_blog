@@ -23,6 +23,7 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'ckeditor'
 gem 'paperclip'
+gem 'friendly_id', '~> 5.1'
 #OAuth for social login
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
