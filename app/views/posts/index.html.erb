@@ -9,6 +9,10 @@
 		</li>
 	<% end %>
   <% if current_user %>
-	 <%= link_to "New Post", new_post_path %>
+  	<% if current_user.username.nil? || current_user.username.blank? %>
+  		<%= link_to "New Post", users_update_profile_path %>
+  	<% else %>
+	 	<%= link_to "New Post", new_post_path %>
+	 <% end %>
   <% end %>
 </ul>

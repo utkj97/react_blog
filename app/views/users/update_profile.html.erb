@@ -1,0 +1,25 @@
+<h4>Update your Profile</h4>
+
+<%= form_tag('/users/update_profile', method: 'post') do %>
+	<% if @user.first[:username].nil? || @user.first[:username].blank? %>
+		<div class="input-field">
+			<label>Username</label>
+			<input type="text" name="username" id="username" autocomplete="off" required>
+		</div>
+
+	<%else%>
+		<div class="input-field">
+			<label class="control-label"> Username</label>
+			<input type="text" name="nickname" class="form-control" value="<%=@user.first[:nickname]%>" disabled/>
+		</div>
+	<%end%>
+	<div class="input-field">
+		<label class="control-label"> Name </label>
+		<input type="text" name="name" class="form-control" value="<%=@user.first[:name]%>"  autocomplete="off" />
+	</div>
+	<div class="input-field">
+		<label class="control-label"> Institution </label>
+		<input type="text" name="college" class="form-control" value="<%=@user.first[:college]%>" />
+	</div>
+	<%=submit_tag "Update"%>
+<%end%>

@@ -12,7 +12,10 @@
   	<% if current_user %>
   	<ul>
   		<li><%= current_user.name %></li>
-  		<li><%= link_to 'Logout', logout_path, method: :delete %></li>
+  		<li><% if current_user.username.nil? || current_user.username.blank? %>
+          <%= link_to 'Update Profile', users_update_profile_path %>
+          <%end%>
+        <%= link_to 'Logout', logout_path, method: :delete %></li>
   	</ul>
   	<% else %>	
 	  	<ul>

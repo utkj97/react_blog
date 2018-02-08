@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
 
   delete '/logout', to: 'sessions#destroy'
+
+  get '/users/update_profile', to: 'users#update_profile'
+  post '/users/update_profile', to: 'users#save_update'
 end
