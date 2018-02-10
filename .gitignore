@@ -28,3 +28,9 @@
 yarn-debug.log*
 yarn-error.log*
 .yarn-integrity
+# React on Rails
+npm-debug.log*
+node_modules
+
+# Generated js bundles
+/app/assets/webpack/*
