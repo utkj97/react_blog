@@ -24,6 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'ckeditor'
 gem 'paperclip'
 gem 'friendly_id', '~> 5.1'
+gem 'mini_racer'
 gem "webpacker", "~> 3.0"
 gem 'react_on_rails', '~>7.0'
 #OAuth for social login
