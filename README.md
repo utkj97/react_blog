@@ -1,1 +1,1 @@
-Basic blog built on Ruby on Rails and React JS to learn these frameworks.
+A basic blog built on Ruby on Rails and React JS to learn these web frameworks.
